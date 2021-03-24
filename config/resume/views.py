@@ -5,4 +5,4 @@ def index(request):
     context={
         
     }
-    return render(request,'resume/index.html',context)
+    return render(request,'shared/base.html',context)
