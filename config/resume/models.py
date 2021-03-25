@@ -7,6 +7,10 @@ class Resume(models.Model):
     description=models.TextField(_("name"))
     email=models.CharField(_("name"), max_length=200)
     github=models.URLField(_("github"), max_length=200)
+    address=models.CharField(_("your address"), max_length=500)
+    image=models.ImageField(_("your image or your logo"), upload_to='resume')
+    resume=models.FileField(_("your resume"), upload_to='resume',)
+    active=models.BooleanField(_("active/deactive"))
 
     
 
@@ -32,7 +36,7 @@ class Projects(models.Model):
 
 
 class Favorites(models.Model):
-    name=models.CharField(_("name of my hobby"), max_length=220)
+    title=models.CharField(_("name of my hobby"), max_length=220)
 
     
 
@@ -41,7 +45,7 @@ class Favorites(models.Model):
         verbose_name_plural = _("Favorites")
 
     def __str__(self):
-        return self.name
+        return self.title
 
   
 
@@ -55,4 +59,4 @@ class Experiances(models.Model):
         verbose_name_plural = _("Experiancess")
 
     def __str__(self):
-        return self.name
+        return self.skill
