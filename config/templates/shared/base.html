@@ -55,7 +55,7 @@
 		</div>
 		<div class="style-menu" data-simplebar>
 			<div class="theme-style">
-				<h4 class="mt-30 mb-10">طرح سایت</h4>
+				<h4 class="mt-30 mb-10">{% translate 'طرح سایت'%}</h4>
 				<ul>
 					<li>
 						<a href="{% static 'css/style-dark.css' %}">
@@ -64,7 +64,7 @@
 									<rect x="0" y="0" width="24" height="24"></rect>
 									<path d="M12.0700837,4.0003006 C11.3895108,5.17692613 11,6.54297551 11,8 C11,12.3948932 14.5439081,15.9620623 18.9299163,15.9996994 C17.5467214,18.3910707 14.9612535,20 12,20 C7.581722,20 4,16.418278 4,12 C4,7.581722 7.581722,4 12,4 C12.0233848,4 12.0467462,4.00010034 12.0700837,4.0003006 Z" fill="#000000"></path>
 								</g>
-							</svg> تیره
+							</svg> {% translate 'تیره' %}
 						</a>
 					</li>
 					<li>
@@ -77,7 +77,7 @@
 									<path d="M10,22 L14,22 L14,22 C14,23.1045695 13.1045695,24 12,24 L12,24 C10.8954305,24 10,23.1045695 10,22 Z" fill="#000000" opacity="0.3"></path>
 									<path d="M9,20 C8.44771525,20 8,19.5522847 8,19 C8,18.4477153 8.44771525,18 9,18 C8.44771525,18 8,17.5522847 8,17 C8,16.4477153 8.44771525,16 9,16 L15,16 C15.5522847,16 16,16.4477153 16,17 C16,17.5522847 15.5522847,18 15,18 C15.5522847,18 16,18.4477153 16,19 C16,19.5522847 15.5522847,20 15,20 C15.5522847,20 16,20.4477153 16,21 C16,21.5522847 15.5522847,22 15,22 L9,22 C8.44771525,22 8,21.5522847 8,21 C8,20.4477153 8.44771525,20 9,20 Z" fill="#000000"></path>
 								</g>
-							</svg> روشن
+							</svg> {% translate 'روشن' %}
 						</a>
 					</li>
 				</ul>
@@ -173,11 +173,11 @@
 										<a href="#portfolio" class="fas fa-clone"></a>
 									</li>
 									<li data-tooltip="تماس" data-position="bottom">
-										<a href="#contact" class="icon-c fas fa-envelope"></a>
+										<a href="{% url 'contact' %}#contact" class="icon-c fas fa-envelope"></a>
 									</li>
 								</ul>
 
-								<!-- Sound wave -->
+								{% comment %} <!-- Sound wave -->
 								<a class="music-bg">
 									<div class="lines">
 										<span></span>
@@ -189,7 +189,7 @@
 									</div>
 									<p> موزیک </p>
 								</a>
-							</nav>
+							</nav> {% endcomment %}
 
 {% block content %}
 {% endblock %}

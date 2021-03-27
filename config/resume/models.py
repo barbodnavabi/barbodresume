@@ -24,7 +24,7 @@ class Resume(models.Model):
 
 class Projects(models.Model):
     name=models.CharField(_("name"), max_length=200)
-    image=models.ImageField(_("image"), upload_to='projects')
+    image=models.ImageField(_("image"), upload_to='projects',blank=True,null=True)
     TypeOf=models.CharField(_("Type of project"), max_length=200)
     class Meta:
         verbose_name = _("Projects")
@@ -60,3 +60,24 @@ class Experiances(models.Model):
 
     def __str__(self):
         return self.skill
+
+class Contact(models.Model):
+    name=models.CharField(_("what is your name?"), max_length=200)
+    phone=models.CharField(_("what is your phone?"), max_length=200,blank=True,null=True)
+    email=models.EmailField(_("what is your email?"), max_length=254,blank=True,null=True)
+    subject=models.CharField(_("subject"), max_length=50)
+    text=models.TextField(_("enter your text"))
+    is_read=models.BooleanField(_("read/not read"), default=False)
+    date=models.DateTimeField(_("when this massage send?"), auto_now_add=True)
+
+    
+
+    class Meta:
+        verbose_name = _("Contact")
+        verbose_name_plural = _("Contacts")
+
+    def __str__(self):
+        return self.name
+
+    # def get_absolute_url(self):
+    #     return reverse("Contact_detail", kwargs={"pk": self.pk})
