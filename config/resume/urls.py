@@ -1,6 +1,5 @@
 from django.urls import path
-from .views import index,AboutListView
+from .views import index
 urlpatterns = [
     path('', index,name='index'),
-    path('about', AboutListView.as_view(),name='about'),
 ]

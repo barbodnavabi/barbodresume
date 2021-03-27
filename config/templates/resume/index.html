@@ -37,17 +37,95 @@
 								</section>
 							</div>
 
-		
-
-							<!-- Resume Section -->
-							<div class="page pt-resume" data-simplebar>
+							<!-- About Section -->
+							<div class="page pt-about" data-simplebar>
 								<section class="container">
 
 									<!-- Section Title -->
-									<!-- <div class="header-page mt-70 mob-mt">
-										<h2> ها</h2>
+									<div class="header-page mt-70 mob-mt">
+										<h2>{% translate 'درباره من'%}</h2>
 										<span></span>
-									</div> -->
+									</div>
+
+									<!-- Personal Info Start -->
+									<div class="row mt-100">
+
+										<!-- Information Block -->
+										<div class="col-lg-12 col-sm-12">
+											<div class="info box-1">
+												<div class="row">
+												{% for resume in resumes %}
+													<div class="col-lg-3 col-sm-4">
+														<div class="photo">
+															<img alt="{{resume.name}}" src="{{resume.image.url}}">
+														</div>``
+													</div>
+													<div class="col-lg-9 col-sm-8">
+														<h4>{% translate 'درباره من' %}</h4>
+														<div class="loc">
+															<i class="fas fa-map-marked-alt"></i>
+														</div>
+														<p>{{resume.description}}</p>
+																											<div class="col-lg-3 col-sm-12 pt-50">
+														<a href="{{resume.resume.url}}" class="btn-st" download>{% translate 'دریافت رزومه' %}</a>
+													</div> 
+													</div>
+
+												{% endfor %}
+
+													<!-- Icon Info -->
+													{% for experiance in experiances %}
+													<div class="col-lg-3 col-sm-4">
+														<div class="info-icon">
+															<i class="fas fa-award"></i>
+															<div class="desc-icon">
+																<h6>{{experiance.skill}}</h6>
+															</div>
+														</div>
+													</div>
+													{% endfor %}
+
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Interests Row Start -->
+									<div class="row mt-100">
+
+										<!-- Header Block -->
+										<div class="col-md-12">
+											<div class="header-box mb-50">
+												<h3>{% translate 'علایق من'%}</h3>
+											</div>
+										</div>
+
+										<div class="col-lg-12 col-sm-12">
+											<div class="box-2">
+												<div class="row">
+                                                {% for favorite in favorites %}
+													<!-- Interests Item -->
+													<div class="col-lg-3 col-sm-6">
+														<div class="inter-icon">
+															<i class="fas fa-award"></i>
+															<div class="desc-inter">
+																<h6>{{favorite.title}}</h6>
+															</div>
+														</div>
+													</div>
+                                                {% endfor %}
+
+
+									
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+								<!-- Resume Section -->
+							<div class="page pt-resume" data-simplebar>
+								<section class="container">
 
 									<!-- Experience & Education Row Start -->
 									
@@ -58,223 +136,32 @@
 										<!-- Header Block -->
 										<div class="col-md-12">
 											<div class="header-box mb-50">
-												<h3>مهارت ها</h3>
+												<h3>{% translate 'مهارت های من'%}</h3>
 											</div>
 										</div>
 									</div>
 
 									<div class="box-1 skills">
 										<div class="row">
-											<div class="col-md-6">
+											<div class="col-md-12">
+{% for skill in experiances %}
+												<!-- Skill Item -->
 
-												<!-- Skill Item -->
 												<div class="skill-item">
-													<h4 class="progress-title">#C</h4>
+													<h4 class="progress-title">{{skill.skill}}</h4>
+													<br>
 													<div class="progress">
-														<div class="progress-bar" style="width:93%">
-															<div class="progress-value">93%</div>
+														<div class="progress-bar" style="width:{{skill.percent}}%">
+															<div class="progress-value">{{skill.percent}}%</div>
 														</div>
 													</div>
 												</div>
-
-												<!-- Skill Item -->
-												<div class="skill-item">
-													<h4 class="progress-title">DotNet Core</h4>
-													<div class="progress">
-														<div class="progress-bar" style="width:90%">
-															<div class="progress-value">90%</div>
-														</div>
-													</div>
-												</div>
-
-												<!-- Skill Item -->
-												<div class="skill-item">
-													<h4 class="progress-title">Javascript</h4>
-													<div class="progress">
-														<div class="progress-bar" style="width:85%">
-															<div class="progress-value">85%</div>
-														</div>
-													</div>
-												</div>
-
-												<!-- Skill Item -->
-												<div class="skill-item">
-													<h4 class="progress-title">Asp.Net Core</h4>
-													<div class="progress">
-														<div class="progress-bar" style="width:90%">
-															<div class="progress-value">90%</div>
-														</div>
-													</div>
-												</div>
-												<!-- Skill Item -->
-												<div class="skill-item">
-													<h4 class="progress-title">Asp.Net MVC</h4>
-													<div class="progress">
-														<div class="progress-bar" style="width:95%">
-															<div class="progress-value">95%</div>
-														</div>
-													</div>
-												</div>
-												<!-- Skill Item -->
-												<div class="skill-item">
-													<h4 class="progress-title">WCF</h4>
-													<div class="progress">
-														<div class="progress-bar" style="width:70%">
-															<div class="progress-value">70%</div>
-														</div>
-													</div>
-												</div>
-												<!-- Skill Item -->
-												<div class="skill-item">
-													<h4 class="progress-title">Type Script</h4>
-													<div class="progress">
-														<div class="progress-bar" style="width:95%">
-															<div class="progress-value">95%</div>
-														</div>
-													</div>
-												</div>
-												<!-- Skill Item -->
-												<div class="skill-item">
-													<h4 class="progress-title">Xamarin</h4>
-													<div class="progress">
-														<div class="progress-bar" style="width:90%">
-															<div class="progress-value">90%</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-6">
-																								<!-- Skill Item -->
-																								<div class="skill-item">
-																									<h4 class="progress-title">WPF</h4>
-																									<div class="progress">
-																										<div class="progress-bar" style="width:85%">
-																											<div class="progress-value">85%</div>
-																										</div>
-																									</div>
-																								</div>
-																								<!-- Skill Item -->
-																								<div class="skill-item">
-																									<h4 class="progress-title">Web Design</h4>
-																									<div class="progress">
-																										<div class="progress-bar" style="width:95%">
-																											<div class="progress-value">95%</div>
-																										</div>
-																									</div>
-																								</div>
-												
-																								<div class="skill-item">
-																									<h4 class="progress-title">Ionic</h4>
-																									<div class="progress">
-																										<div class="progress-bar" style="width:95%">
-																											<div class="progress-value">85%</div>
-																										</div>
-																									</div>
-																								</div>
-																								<div class="skill-item">
-																									<h4 class="progress-title">Css3</h4>
-																									<div class="progress">
-																										<div class="progress-bar" style="width:95%">
-																											<div class="progress-value">95%</div>
-																										</div>
-																									</div>
-																								</div>
-																								<div class="skill-item">
-																									<h4 class="progress-title">HTML5</h4>
-																									<div class="progress">
-																										<div class="progress-bar" style="width:95%">
-																											<div class="progress-value">95%</div>
-																										</div>
-																									</div>
-																								</div>
-												
-																								<div class="skill-item">
-																									<h4 class="progress-title">Sql Server 2019</h4>
-																									<div class="progress">
-																										<div class="progress-bar" style="width:90%">
-																											<div class="progress-value">90%</div>
-																										</div>
-																									</div>
-																								</div>
-																								<div class="skill-item">
-																									<h4 class="progress-title">SignalR</h4>
-																									<div class="progress">
-																										<div class="progress-bar" style="width:95%">
-																											<div class="progress-value">95%</div>
-																										</div>
-																									</div>
-																								</div>
-																								<div class="skill-item">
-																									<h4 class="progress-title">Angular 8</h4>
-																									<div class="progress">
-																										<div class="progress-bar" style="width:85%">
-																											<div class="progress-value">85%</div>
-																										</div>
-																									</div>
-																								</div>
+												{% endfor %}
 											</div>
 										</div>
 									</div>
 
-									<!-- Work Process Row Start -->
-									<div class="row mt-100">
 
-										<!-- Header Block -->
-										<div class="col-md-12">
-											<div class="header-box mb-50">
-												<h3>پروسه کاری من</h3>
-											</div>
-										</div>
-									</div>
-
-									<div class="box-2 work-process mb-100">
-										<div class="row">
-											<div class="col-lg-4 col-sm-12 ltr">
-
-												<!-- Working Process Item-->
-												<div class="single-wp width-sm process-1">
-													<p class="wp-step">01</p>
-													<h4 class="wp-title">بررسی ایده</h4>
-												</div>
-
-												<!-- Working Process Item-->
-												<div class="single-wp width-sm process-2">
-													<p class="wp-step">02</p>
-													<h4 class="wp-title">ارائه طرح اولیه</h4>
-													
-												</div>
-											</div>
-
-											<div class="col-lg-4 hidden-sm">
-
-												<!-- Working Process Circle-->
-												<div class="wp-circle">
-													<h4>پروسه کاری</h4>
-													<span class="dots top-l"></span>
-													<span class="dots bottom-l"></span>
-													<span class="dots top-r"></span>
-													<span class="dots bottom-r"></span>
-												</div>
-											</div>
-
-											<div class="col-lg-4 col-sm-12 rtl">
-
-												<!-- Working Process Item-->
-												<div class="single-wp width-sm process-3">
-													<p class="wp-step">03</p>
-													<h4 class="wp-title">طرح اولیه وب</h4>
-							
-												</div>
-
-												<!-- Working Process Item-->
-												<div class="single-wp width-sm process-4">
-													<p class="wp-step">04</p>
-													<h4 class="wp-title">طرح نهایی</h4>
-										
-												</div>
-											</div>
-										</div>
-									</div>
 								</section>
 							</div>
 
@@ -284,7 +171,7 @@
 
 									<!-- Section Title -->
 									<div class="header-page mt-70 mob-mt">
-										<h2>نمونه‌کارها</h2>
+										<h2>{% translate 'نمونه‌کارها'%}</h2>
 										<span></span>
 									</div>
 
@@ -292,7 +179,7 @@
 									<div class="row mt-100">
 										<div class="col-lg-12 col-sm-12 portfolio-filter">
 											<ul>
-												<li class="active" data-filter="*">پروژه ها</li>
+												<li class="active" data-filter="*">{% translate 'پروژه ها' %}</li>
 											</ul>
 										</div>
 									</div>
@@ -312,67 +199,8 @@
 											</figure>
 										</div>
 
-										<!-- Portfolio Item -->
-										<div class="item col-lg-4 col-sm-6 design">
-											<figure>
-												<img alt="" src="img/portfolio/3.jpg">
-												<figcaption>
-													<h3>لطیفان</h3>
-													<p>فروشگاهی</p><i class="fas fa-image"></i>	<i class="fas fa-image"><a href="fas fa-eye"></a></i>													
-													<a class="image-link" href="img/portfolio/3.jpg"></a>													
-												</figcaption>
-											</figure>
-										</div>
-										<!-- Portfolio Item -->
-										<div class="item col-lg-4 col-sm-6 graphic">
-											<figure>
-												<img alt="" src="img/portfolio/4.jpg">
-												<figcaption>
-													<h3>گت ورک</h3>
-													<p>فریلنسری</p><i class="fas fa-image"></i>
-													<a class="image-link" href="img/portfolio/4.jpg"></a>
-												</figcaption>
-											</figure>
-										</div>
 
-										<!-- Portfolio Item -->
-										<div class="item col-lg-4 col-sm-6 graphic">
-											<figure>
-												<img alt="" src="img/portfolio/5.jpg">
-												<figcaption>
-													<h3>آموزشگاه برنامه نویسان</h3>
-													<p>آموزشی</p><i class="fas fa-image"></i>
-													<a class="image-link" href="img/portfolio/5.jpg"></a>
-												</figcaption>
-											</figure>
-										</div>
-
-										<!-- Portfolio Item -->
-										<div class="item col-lg-4 col-sm-6 brand">
-											<figure>
-												<img alt="" src="img/portfolio/2.jpg">
-												<figcaption>
-													<h3>کلان بازار</h3>
-													<p>چند فروشگاهی</p><i class="fas fa-image"></i>
-													<a class="image-link" href="img/portfolio/2.jpg"></a>
-												</figcaption>
-											</figure>
-										</div>
-
-										<!-- Portfolio Item -->
-										<div class="item col-lg-4 col-sm-6 graphic">
-											<figure>
-												<img alt="" src="img/portfolio/6.jpg">
-												<figcaption>
-													<h3>فروشگاه برنامه نویسان</h3>
-													<p>فروشگاهی</p><i class="fas fa-image"></i>
-													<a class="image-link" href="img/portfolio/6.jpg"></a>
-												</figcaption>
-											</figure>
-										</div>
-
-									
-
+					
 										
 									</div>
 								</section>
