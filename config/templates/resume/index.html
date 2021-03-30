@@ -17,10 +17,9 @@
 										<p class="cd-headline rotate-1">
 											<span class="cd-words-wrapper">
 												<b class="is-visible">{% translate 'برنامه نویس وب'%}</b>
-												<b>{% translate 'برنامه نویس پایتون'%}</b>
-												<b>{% translate 'توسعه جنگو'%}</b>
-												<b>{% translate 'فریلنسر'%}</b>
-												<b>{% translate 'جاوا اسکریپت'%}</b>
+											{% for skill in skills %}
+												<b>{{skill.skill}}</b>
+											{% endfor %}
 											</span>
 										</p>
 									</div>

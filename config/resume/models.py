@@ -1,17 +1,37 @@
 from django.db import models
 from django.utils.translation import gettext as _
+from translated_fields import TranslatedField
 
+
+
+
+class FirstPageSkills(models.Model):
+    title=models.CharField(_("title"), max_length=50)
+    skill=models.ForeignKey("Experiances", verbose_name=_("my skill"),on_delete=models.CASCADE)
+
+    
+
+    class Meta:
+        verbose_name = _("FirstPageSkill")
+        verbose_name_plural = _("FirstPageSkills")
+
+    def __str__(self):
+        return self.title
+
+
+        category_to_str.short_description = "مهارت"
+    
 class Resume(models.Model):
-    name=models.CharField(_("name"), max_length=200)
+    name=TranslatedField(models.CharField(_(" your name"), max_length=200))
     phone=models.CharField(_("phone"), max_length=200)
-    description=models.TextField(_("name"))
+    description=TranslatedField(models.TextField(_("name")))
     email=models.CharField(_("name"), max_length=200)
     github=models.URLField(_("github"), max_length=200,blank=True,null=True)
     facebook=models.URLField(_("facebook"), max_length=200,blank=True,null=True)
     instagram=models.URLField(_("instagram"), max_length=200,blank=True,null=True)
     telegram=models.URLField(_("telegram"), max_length=200,blank=True,null=True)
     youtube=models.URLField(_("youtube"), max_length=200,blank=True,null=True)
-    address=models.CharField(_("your address"), max_length=500)
+    address=TranslatedField(models.CharField(_("your address"), max_length=500))
     image=models.ImageField(_("your image or your logo"), upload_to='resume')
     resume=models.FileField(_("your resume"), upload_to='resume',)
     active=models.BooleanField(_("active/deactive"))
@@ -27,12 +47,12 @@ class Resume(models.Model):
 
 
 class Projects(models.Model):
-    name=models.CharField(_("name"), max_length=200)
+    name=TranslatedField(models.CharField(_("name"), max_length=200))
     image=models.ImageField(_("image"), upload_to='projects',blank=True,null=True)
-    TypeOf=models.CharField(_("Type of project"), max_length=200)
+    TypeOf=TranslatedField(models.CharField(_("Type of project"), max_length=200))
     class Meta:
         verbose_name = _("Projects")
-        verbose_name_plural = _("Projectss")
+        verbose_name_plural = _("Projects")
 
     def __str__(self):
         return self.name
@@ -52,10 +72,14 @@ class Favorites(models.Model):
         return self.title
 
   
+class ExperianceManager(models.Manager):
+  def active(self):
+    return self.filter(active=True)
 
 class Experiances(models.Model):
-    skill=models.CharField(_("skill"), max_length=200)
+    skill=TranslatedField(models.CharField(_("skill"), max_length=200))
     percent=models.IntegerField(_("percent of your skill"))
+    active=models.BooleanField(_("active/deactive"))
     
 
     class Meta:
@@ -85,3 +109,5 @@ class Contact(models.Model):
 
     # def get_absolute_url(self):
     #     return reverse("Contact_detail", kwargs={"pk": self.pk})
+
+
