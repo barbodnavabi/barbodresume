@@ -90,13 +90,13 @@ class Experiances(models.Model):
         return self.skill
 
 class Contact(models.Model):
-    name=models.CharField(_("what is your name?"), max_length=200)
-    phone=models.CharField(_("what is your phone?"), max_length=200,blank=True,null=True)
-    email=models.EmailField(_("what is your email?"), max_length=254,blank=True,null=True)
-    subject=models.CharField(_("subject"), max_length=50)
-    text=models.TextField(_("enter your text"))
-    is_read=models.BooleanField(_("read/not read"), default=False)
-    date=models.DateTimeField(_("when this massage send?"), auto_now_add=True)
+    name=models.CharField(_("نام شما چیست"), max_length=200)
+    phone=models.CharField(_("شماره شما چیست؟"), max_length=200,blank=True,null=True)
+    email=models.EmailField(_("ایمیل شما چیست؟"), max_length=254,blank=True,null=True)
+    subject=models.CharField(_("عنوان"), max_length=50)
+    text=models.TextField(_("توضیحات خود را وارد نمایید"))
+    is_read=models.BooleanField(_("خوانده شده/خوانده نشده"), default=False)
+    date=models.DateTimeField(_("زمان ارسال این درخواست"), auto_now_add=True)
 
     
 

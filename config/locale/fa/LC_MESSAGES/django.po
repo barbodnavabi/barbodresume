@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-30 06:01-0700\n"
+"POT-Creation-Date: 2021-04-02 23:08-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1214,136 +1214,155 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
-#: .\resume\models.py:5 .\resume\models.py:7 .\resume\models.py:8
-#: .\resume\models.py:30
-msgid "name"
-msgstr "نام"
+#: .\resume\models.py:9
+msgid "title"
+msgstr ""
 
-#: .\resume\models.py:6
+#: .\resume\models.py:10
+#, fuzzy
+#| msgid "skill"
+msgid "my skill"
+msgstr "مهارت"
+
+#: .\resume\models.py:15
+msgid "FirstPageSkill"
+msgstr ""
+
+#: .\resume\models.py:16
+msgid "FirstPageSkills"
+msgstr ""
+
+#: .\resume\models.py:25
+#, fuzzy
+#| msgid "what is your name?"
+msgid " your name"
+msgstr "نام شما چیست"
+
+#: .\resume\models.py:26
 msgid "phone"
 msgstr "تلفن"
 
-#: .\resume\models.py:9
+#: .\resume\models.py:27 .\resume\models.py:28 .\resume\models.py:50
+msgid "name"
+msgstr "نام"
+
+#: .\resume\models.py:29
 msgid "github"
 msgstr "گیتهاب"
 
-#: .\resume\models.py:10
+#: .\resume\models.py:30
 msgid "facebook"
 msgstr "فیسبوک"
 
-#: .\resume\models.py:11
+#: .\resume\models.py:31
 msgid "instagram"
 msgstr "اینستاگرام"
 
-#: .\resume\models.py:12
+#: .\resume\models.py:32
 msgid "telegram"
 msgstr "تلگرام"
 
-#: .\resume\models.py:13
+#: .\resume\models.py:33
 msgid "youtube"
 msgstr "یوتیوب"
 
-#: .\resume\models.py:14
+#: .\resume\models.py:34
 msgid "your address"
 msgstr "آدرس"
 
-#: .\resume\models.py:15
+#: .\resume\models.py:35
 msgid "your image or your logo"
 msgstr "عکس یا لوگو"
 
-#: .\resume\models.py:16
+#: .\resume\models.py:36
 msgid "your resume"
 msgstr "فایل رزومه"
 
-#: .\resume\models.py:17
+#: .\resume\models.py:37 .\resume\models.py:82
 msgid "active/deactive"
 msgstr "فعال/غیرفعال"
 
-#: .\resume\models.py:22
+#: .\resume\models.py:42
 msgid "Resume"
 msgstr "رزومه"
 
-#: .\resume\models.py:23
+#: .\resume\models.py:43
 msgid "Resumes"
 msgstr "رزومه ها"
 
-#: .\resume\models.py:31
+#: .\resume\models.py:51
 msgid "image"
 msgstr "عکس"
 
-#: .\resume\models.py:32
+#: .\resume\models.py:52
 msgid "Type of project"
 msgstr "زمینه پروژه"
 
-#: .\resume\models.py:34
+#: .\resume\models.py:54 .\resume\models.py:55
 msgid "Projects"
 msgstr "پروژه ها"
 
-#: .\resume\models.py:35
-msgid "Projectss"
-msgstr "پروژه ها"
-
-#: .\resume\models.py:43
+#: .\resume\models.py:63
 msgid "name of my hobby"
 msgstr "نام سرگرمی شما"
 
-#: .\resume\models.py:48
+#: .\resume\models.py:68
 msgid "Favorite"
 msgstr "علاقه"
 
-#: .\resume\models.py:49
+#: .\resume\models.py:69
 msgid "Favorites"
 msgstr "علایق"
 
-#: .\resume\models.py:57
+#: .\resume\models.py:80
 msgid "skill"
 msgstr "مهارت"
 
-#: .\resume\models.py:58
+#: .\resume\models.py:81
 msgid "percent of your skill"
 msgstr "چند درصد این مهارت را بلدی؟"
 
-#: .\resume\models.py:62
+#: .\resume\models.py:86
 msgid "Experiances"
 msgstr "تجارب"
 
-#: .\resume\models.py:63
+#: .\resume\models.py:87
 msgid "Experiancess"
 msgstr "تجارب"
 
-#: .\resume\models.py:69
-msgid "what is your name?"
-msgstr "نام شما چیست"
+#: .\resume\models.py:93
+msgid "نام شما چیست"
+msgstr ""
 
-#: .\resume\models.py:70
-msgid "what is your phone?"
-msgstr "تلفن شما چیست؟"
+#: .\resume\models.py:94
+msgid "شماره شما چیست؟"
+msgstr ""
 
-#: .\resume\models.py:71
-msgid "what is your email?"
-msgstr "ایمیل شما چیست؟"
+#: .\resume\models.py:95
+msgid "ایمیل شما چیست؟"
+msgstr ""
 
-#: .\resume\models.py:72
-msgid "subject"
-msgstr "عنوان"
+#: .\resume\models.py:96
+msgid "عنوان"
+msgstr ""
 
-#: .\resume\models.py:73
-msgid "enter your text"
-msgstr "توضیحات خود را بنویسید"
+#: .\resume\models.py:97
+msgid "توضیحات خود را وارد نمایید"
+msgstr ""
 
-#: .\resume\models.py:74
-msgid "read/not read"
-msgstr "خوانده/خوانده نشده"
+#: .\resume\models.py:98
+msgid "خوانده شده/خوانده نشده"
+msgstr ""
 
-#: .\resume\models.py:75
-msgid "when this massage send?"
-msgstr "چه موقع ارسال شده؟"
+#: .\resume\models.py:99
+msgid "زمان ارسال این درخواست"
+msgstr ""
 
-#: .\resume\models.py:80
+#: .\resume\models.py:104
 msgid "Contact"
 msgstr "مخاطب"
 
-#: .\resume\models.py:81
+#: .\resume\models.py:105
 msgid "Contacts"
 msgstr "مخاطبین"
 
@@ -1375,43 +1394,27 @@ msgstr ""
 msgid "برنامه نویس وب"
 msgstr ""
 
-#: .\templates\resume\index.html:20
-msgid "برنامه نویس پایتون"
-msgstr ""
-
-#: .\templates\resume\index.html:21
-msgid "توسعه جنگو"
-msgstr ""
-
-#: .\templates\resume\index.html:22
-msgid "فریلنسر"
-msgstr ""
-
-#: .\templates\resume\index.html:23
-msgid "جاوا اسکریپت"
-msgstr ""
-
-#: .\templates\resume\index.html:46 .\templates\resume\index.html:64
+#: .\templates\resume\index.html:45 .\templates\resume\index.html:63
 msgid "درباره من"
 msgstr ""
 
-#: .\templates\resume\index.html:70
+#: .\templates\resume\index.html:69
 msgid "دریافت رزومه"
 msgstr ""
 
-#: .\templates\resume\index.html:99
+#: .\templates\resume\index.html:98
 msgid "علایق من"
 msgstr ""
 
-#: .\templates\resume\index.html:139
+#: .\templates\resume\index.html:138
 msgid "مهارت های من"
 msgstr ""
 
-#: .\templates\resume\index.html:174
+#: .\templates\resume\index.html:173
 msgid "نمونه‌کارها"
 msgstr ""
 
-#: .\templates\resume\index.html:182
+#: .\templates\resume\index.html:181
 msgid "پروژه ها"
 msgstr ""
 
@@ -1442,3 +1445,24 @@ msgstr ""
 #: .\templates\shared\base.html:136
 msgid "منو"
 msgstr ""
+
+#~ msgid "Projectss"
+#~ msgstr "پروژه ها"
+
+#~ msgid "what is your phone?"
+#~ msgstr "تلفن شما چیست؟"
+
+#~ msgid "what is your email?"
+#~ msgstr "ایمیل شما چیست؟"
+
+#~ msgid "subject"
+#~ msgstr "عنوان"
+
+#~ msgid "enter your text"
+#~ msgstr "توضیحات خود را بنویسید"
+
+#~ msgid "read/not read"
+#~ msgstr "خوانده/خوانده نشده"
+
+#~ msgid "when this massage send?"
+#~ msgstr "چه موقع ارسال شده؟"

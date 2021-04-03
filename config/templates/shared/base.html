@@ -1,7 +1,12 @@
 {% load static %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
+{% if LANGUAGE_CODE == 'fa'  %}
 <html lang="fa" dir="rtl">
+{% else %}
+<html lang="en" dir="ltr">
+{% endif %}
 
 <head>
 
@@ -11,7 +16,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<!-- Title -->
-	<title>سایت شخصی باربد نوابی</title>
+	<title>{% translate 'سایت شخصی باربد نوابی'%}</title>
 
 	<!-- CSS Plugins -->
 	<link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
@@ -169,7 +174,7 @@
 										<span></span>
 										<span></span>
 									</div>
-									<p> موزیک </p>
+									<p>{% translate ' در حال پیشرفت '%}</p>
 								</a>
 							</nav> 
 
